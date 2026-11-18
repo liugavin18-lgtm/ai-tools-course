@@ -32,9 +32,14 @@ nav:
       - 建第一个仓库: github/02-first-repo.md
       - 发布成网站: github/03-publish-pages.md
   - MCP 讲解:
-      - MCP 是什么: mcp/01-what-is-mcp.md
-      - 安装和使用: mcp/02-install-and-use.md
-      - 自己做一个: mcp/03-build-your-own.md
+      - 1 原理: mcp/01-principles.md
+      - 2 安装和使用: mcp/02-use-existing.md
+      - 3 动手做第一个服务: mcp/03-first-server.md
+      - 4 把工具设计好: mcp/04-design-tools.md
+      - 5 安全与权限: mcp/05-security.md
+      - 6 实战案例: mcp/06-case-study.md
+      - 7 排错手册: mcp/07-troubleshooting.md
+      - 8 练习与考核: mcp/08-exercises.md
   - Skill 讲解:
       - Skill 是什么: skill/01-what-is-skill.md
       - 写一个 Skill: skill/02-write-a-skill.md

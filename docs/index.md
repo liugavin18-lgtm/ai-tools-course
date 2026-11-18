@@ -11,7 +11,7 @@
 | 模块 | 解决什么问题 | 建议用时 |
 |---|---|---|
 | [GitHub 入门](github/01-what-is-github.md) | 内容放哪里、怎么发给学员 | 40 分钟 |
-| [MCP 讲解](mcp/01-what-is-mcp.md) | 怎么让 AI 用上你的工具和数据 | 40 分钟 |
+| [MCP 讲解](mcp/01-principles.md) | 从原理到自己做一个、安全、排错，含综合项目和测验（共 8 章） | 6~8 小时 |
 | [Skill 讲解](skill/01-what-is-skill.md) | 怎么让 AI 记住你的工作方法 | 30 分钟 |
 
 !!! tip "学习顺序"
