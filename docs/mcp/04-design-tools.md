@@ -1,5 +1,10 @@
 # 第 4 章　把工具设计好
 
+<div class="voice"><b>🎧 语音版</b><audio controls preload="none" src="../../assets/audio/mcp-04.m4a"></audio><span>约 5 分钟</span></div>
+
+??? note "文字稿（点击展开）"
+    --8<-- "mcp-04.txt"
+
 !!! abstract "本章目标"
     学完你能：① 判断一个工具设计得好不好；② 写出 AI 能“一看就懂”的描述；③ 避免常见的设计坑。
 
@@ -27,6 +32,12 @@
 |---|---|
 | ❌ 差 | `"""查询数据"""` |
 | ✅ 好 | `"""查询某个月的销售汇总。month 格式 YYYY-MM，例如 2026-03。返回订单数、销量、金额和前三名产品。"""` |
+
+下面是 `monthly_sales` 这个工具，**AI 实际看到的全部内容**（由服务端真实返回，不是手写的）：
+
+![AI 看到的工具说明书](../assets/img/shot-tool-spec.png){ .diagram loading=lazy }
+
+<p class="fig-caption">图 4-1　注意：只有名字、描述和参数规范。描述里的“格式 YYYY-MM，例如 2026-03”，直接决定 AI 能不能填对参数。</p>
 
 !!! tip "测试方法"
     把工具名、描述、参数单独发给一个没见过代码的同事，问他：“你知道什么时候该用它吗？”他犹豫，AI 就会犹豫。

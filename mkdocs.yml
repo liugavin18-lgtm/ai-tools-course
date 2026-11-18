@@ -19,12 +19,17 @@ theme:
       toggle:
         icon: material/weather-sunny
         name: 切换浅色模式
+extra_css:
+  - assets/css/extra.css
 markdown_extensions:
   - admonition
   - tables
   - attr_list
   - pymdownx.superfences
   - pymdownx.details
+  - pymdownx.snippets:
+      base_path: ["narration"]
+      check_paths: true
 nav:
   - 首页: index.md
   - GitHub 入门:

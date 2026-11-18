@@ -1,0 +1,31 @@
+/* 课程插图：居中、自适应宽度、轻阴影 */
+.md-typeset img.diagram {
+  display: block;
+  margin: 1.2rem auto 0.4rem;
+  max-width: 100%;
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 0 1px 6px rgba(0, 0, 0, 0.18);
+}
+.md-typeset .fig-caption {
+  text-align: center;
+  font-size: 0.78rem;
+  color: var(--md-default-fg-color--light);
+  margin: 0 0 1.4rem;
+}
+
+/* 语音播放器 */
+.md-typeset .voice {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+  flex-wrap: wrap;
+  padding: 0.7rem 0.9rem;
+  margin: 1rem 0;
+  border: 1px solid var(--md-default-fg-color--lightest);
+  border-left: 4px solid var(--md-primary-fg-color);
+  border-radius: 8px;
+  background: var(--md-code-bg-color);
+}
+.md-typeset .voice b { white-space: nowrap; }
+.md-typeset .voice audio { flex: 1 1 260px; min-width: 220px; height: 36px; }

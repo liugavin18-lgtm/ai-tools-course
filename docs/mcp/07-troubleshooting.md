@@ -1,5 +1,10 @@
 # 第 7 章　排错手册
 
+<div class="voice"><b>🎧 语音版</b><audio controls preload="none" src="../../assets/audio/mcp-07.m4a"></audio><span>约 5 分钟</span></div>
+
+??? note "文字稿（点击展开）"
+    --8<-- "mcp-07.txt"
+
 !!! abstract "本章目标"
     遇到问题时，知道按什么顺序查、哪里看到真实报错。
 
@@ -14,6 +19,10 @@
 ④ AI 应用连得上吗？           → 新开会话，/mcp 看状态
 ⑤ AI 会不会用？               → 检查工具描述，换个问法
 ```
+
+![MCP 排错决策树](../assets/img/debug-tree.svg){ .diagram loading=lazy }
+
+<p class="fig-caption">图 7-1　排错决策树：从上往下逐项检查，每一步“没问题”才进入下一步。</p>
 
 ### 手动启动，看真实报错
 

@@ -1,5 +1,10 @@
 # 第 3 章　动手做第一个 MCP 服务
 
+<div class="voice"><b>🎧 语音版</b><audio controls preload="none" src="../../assets/audio/mcp-03.m4a"></audio><span>约 5 分钟</span></div>
+
+??? note "文字稿（点击展开）"
+    --8<-- "mcp-03.txt"
+
 !!! abstract "本章目标"
     学完你能：① 从零运行一个完整的 MCP 服务；② 不依赖 AI，自己测试它；③ 接到 Claude Code 上使用；④ 看到底层的 JSON-RPC 消息。
 
@@ -88,6 +93,12 @@ monthly_sales  ✅ {"month": "2026-03", "orders": 39, "qty": 84, "amount": 13095
 结果： 全部通过 ✅
 ```
 
+下面是**真实运行**的截图（不是示意图）：
+
+![运行 test_client.py 的真实输出](../assets/img/shot-test-client.png){ .diagram loading=lazy }
+
+<p class="fig-caption">图 3-1　上半部分是“应该成功”的 4 次调用；下半部分是“必须被拒绝”的 5 条安全测试，全部显示“通过”。</p>
+
 !!! success "这一步非常重要"
     **永远先自己测试，再交给 AI 用。** 上面的“安全测试”部分尤其关键：它证明服务真的写不进去，而不是“希望 AI 别乱改”。
 
@@ -125,6 +136,12 @@ claude mcp add demo-db -s user -- uv run $(pwd)/server.py
 > 帮我删掉 orders 表。
 
 最后一句是故意的：**AI 应该告诉你做不到**，因为服务根本没有写入能力。
+
+AI 查到数据后，还可以帮你整理成图表。下面是用示例库的数据画的样子：
+
+![示例库的月度与产品销售额](../assets/img/demo-chart.svg){ .diagram loading=lazy }
+
+<p class="fig-caption">图 3-2　示例库的虚构数据。数据来自 monthly_sales 与 run_query 的查询结果。</p>
 
 ## 3.6　可视化调试：官方 Inspector
 

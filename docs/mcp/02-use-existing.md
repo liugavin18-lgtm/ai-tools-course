@@ -1,5 +1,10 @@
 # 第 2 章　安装和使用现成的 MCP
 
+<div class="voice"><b>🎧 语音版</b><audio controls preload="none" src="../../assets/audio/mcp-02.m4a"></audio><span>约 5 分钟</span></div>
+
+??? note "文字稿（点击展开）"
+    --8<-- "mcp-02.txt"
+
 !!! abstract "本章目标"
     学完你能：① 给 Claude Code 装上本地和远程 MCP；② 看懂配置文件；③ 管理和排查已装的服务。
 

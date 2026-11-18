@@ -1,5 +1,10 @@
 # 第 1 章　原理：MCP 到底是什么
 
+<div class="voice"><b>🎧 语音版</b><audio controls preload="none" src="../../assets/audio/mcp-01.m4a"></audio><span>约 5 分钟</span></div>
+
+??? note "文字稿（点击展开）"
+    --8<-- "mcp-01.txt"
+
 !!! abstract "本章目标"
     学完你能：① 用一句话向别人解释 MCP；② 说出 MCP 里的三个角色和三类能力；③ 看懂一次工具调用在底层发生了什么。
 
@@ -26,6 +31,10 @@ Kimi   ├──  MCP 标准接口  ──┤ 日历
 
 就像手机充电口统一成 USB-C：**充电器（工具）只做一次，所有手机（AI）都能插**。
 
+![没有 MCP 与有 MCP 的对接数量对比](../assets/img/mn-problem.svg){ .diagram loading=lazy }
+
+<p class="fig-caption">图 1-1　3 个 AI × 3 个工具：没有标准要 9 套对接，有标准只需 6 个接口。工具和 AI 越多，差距越大。</p>
+
 !!! quote "一句话定义"
     **MCP（Model Context Protocol，模型上下文协议）是 AI 应用与外部工具、数据之间的开放标准接口。**
 
@@ -40,6 +49,10 @@ Kimi   ├──  MCP 标准接口  ──┤ 日历
 !!! note "最常见的误解"
     MCP 自己**不做判断**。“该用哪个工具”是 **AI 模型**决定的；MCP 只负责让工具能被统一地发现和调用。
 
+![MCP 的三个角色](../assets/img/roles.svg){ .diagram loading=lazy }
+
+<p class="fig-caption">图 1-2　AI 应用内部有“模型”和“客户端”；客户端通过 stdio（本地进程）或 HTTP（联网）连接各个服务。</p>
+
 ## 1.3　服务端能提供的三类能力
 
 | 能力 | 谁来触发 | 作用 | 类比 |
@@ -49,6 +62,10 @@ Kimi   ├──  MCP 标准接口  ──┤ 日历
 | **Prompt（提示词模板）** | 用户主动选用 | 预设好的提问方式和步骤 | 一张填空的表单 |
 
 日常 **90% 的场景只用 Tool**。Resource 和 Prompt 在第 3 章的示例里会各演示一次。
+
+![Tool、Resource、Prompt 三类能力](../assets/img/primitives.svg){ .diagram loading=lazy }
+
+<p class="fig-caption">图 1-3　三类能力的区别：谁来触发、做什么、怎么类比。</p>
 
 ## 1.4　两种连接方式（传输）
 
@@ -74,6 +91,12 @@ Kimi   ├──  MCP 标准接口  ──┤ 日历
 ⑥ 返回    server → client:  {orders: 39, amount: 130955.0, ...}
 ⑦ 回答    模型把结果整理成人话告诉你
 ```
+
+**▶ 动画演示**（自动循环播放，约 20 秒一轮）：
+
+![一次 MCP 工具调用的完整过程（动画）](../assets/img/call-flow.svg){ .diagram loading=lazy }
+
+<p class="fig-caption">图 1-4　按时间顺序，一步一步出现：启动 → 握手 → 点名 → 提问 → 决策 → 调用 → 返回 → 回答。</p>
 
 底层通信使用 **JSON-RPC**（一种简单的“请求—响应”JSON 格式）。第 3 章你会亲眼看到这些消息。
 

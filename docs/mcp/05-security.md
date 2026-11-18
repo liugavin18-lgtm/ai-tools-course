@@ -1,5 +1,10 @@
 # 第 5 章　安全与权限
 
+<div class="voice"><b>🎧 语音版</b><audio controls preload="none" src="../../assets/audio/mcp-05.m4a"></audio><span>约 6 分钟</span></div>
+
+??? note "文字稿（点击展开）"
+    --8<-- "mcp-05.txt"
+
 !!! abstract "本章目标"
     学完你能：① 说出 MCP 的主要风险；② 用“多层防线”做出真正只读的服务；③ 为危险操作设计人工审批；④ 评估一个第三方 MCP 能不能装。
 
@@ -47,6 +52,12 @@ def _authorize(action, arg1, arg2, dbname, source):
     return sqlite3.SQLITE_DENY                                       # 默认拒绝
 ```
 
+**▶ 动画演示**：三种请求依次经过三道防线（约 20 秒一轮）。
+
+![只读服务的三道防线（动画）](../assets/img/readonly-layers.svg){ .diagram loading=lazy }
+
+<p class="fig-caption">图 5-1　绿色：正常查询，一路放行；红色：DROP TABLE，被授权白名单拒绝；黄色：超大查询，被截断或超时中断。</p>
+
 !!! info "‘默认拒绝，白名单放行’"
     不要写“禁止 DROP、禁止 UPDATE……”这种**黑名单**，总会漏。要写**白名单**：只允许读，其余全拒绝。
 
@@ -66,6 +77,10 @@ AI 想调用“生成视频”（会扣积分）
 ④ 才允许调用
 ⑤ 调用后核对实际花费，记账
 ```
+
+![危险操作的人工审批闸门](../assets/img/approval-gate.svg){ .diagram loading=lazy }
+
+<p class="fig-caption">图 5-2　AI 在第 ③ 步必须停下，由人在第 ④ 步批准，之后才能执行。</p>
 
 要点：
 

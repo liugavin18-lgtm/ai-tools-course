@@ -1,5 +1,10 @@
 # 第 6 章　实战案例：管理多个本地数据库
 
+<div class="voice"><b>🎧 语音版</b><audio controls preload="none" src="../../assets/audio/mcp-06.m4a"></audio><span>约 6 分钟</span></div>
+
+??? note "文字稿（点击展开）"
+    --8<-- "mcp-06.txt"
+
 !!! abstract "本章目标"
     通过一个真实项目的完整过程，学会：① 如何从需求走到设计；② 一个“注册表”式的多数据库服务怎么做；③ 真实开发中会踩哪些坑，怎么发现和修复。
 

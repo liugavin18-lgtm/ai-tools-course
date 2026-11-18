@@ -1,5 +1,10 @@
 # 第 8 章　练习与考核
 
+<div class="voice"><b>🎧 语音版</b><audio controls preload="none" src="../../assets/audio/mcp-08.m4a"></audio><span>约 5 分钟</span></div>
+
+??? note "文字稿（点击展开）"
+    --8<-- "mcp-08.txt"
+
 !!! abstract "怎么用本章"
     先做**综合项目**，再做**测验**。每项都有验收标准，对照检查即可，不需要老师批改。
 
