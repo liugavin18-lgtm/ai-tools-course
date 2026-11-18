@@ -1,0 +1,40 @@
+site_name: AI 工具实战课
+site_description: GitHub、MCP、Skill 入门到实战，用大白话讲清楚
+theme:
+  name: material
+  language: zh
+  features:
+    - navigation.sections
+    - navigation.top
+    - search.highlight
+    - content.code.copy
+  palette:
+    - scheme: default
+      primary: indigo
+      toggle:
+        icon: material/weather-night
+        name: 切换深色模式
+    - scheme: slate
+      primary: indigo
+      toggle:
+        icon: material/weather-sunny
+        name: 切换浅色模式
+markdown_extensions:
+  - admonition
+  - tables
+  - attr_list
+  - pymdownx.superfences
+  - pymdownx.details
+nav:
+  - 首页: index.md
+  - GitHub 入门:
+      - GitHub 是什么: github/01-what-is-github.md
+      - 建第一个仓库: github/02-first-repo.md
+      - 发布成网站: github/03-publish-pages.md
+  - MCP 讲解:
+      - MCP 是什么: mcp/01-what-is-mcp.md
+      - 安装和使用: mcp/02-install-and-use.md
+      - 自己做一个: mcp/03-build-your-own.md
+  - Skill 讲解:
+      - Skill 是什么: skill/01-what-is-skill.md
+      - 写一个 Skill: skill/02-write-a-skill.md
